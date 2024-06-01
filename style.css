@@ -11,8 +11,8 @@ body, main, section, footer {
 
 header {
     border: 1px white solid;
-    height: 30vh;
-    background-color: rgb(8, 70, 88);
+    height: 25vh;
+    background-color: rgb(2, 31, 59);
 }
 
 .container-box{
@@ -23,15 +23,24 @@ header {
 
 #logo {
     width: 350px;
-    height: 130px;
+    height: 110px;
     border-radius: 10%;
     float: left;
     object-fit: cover;
 }
 
+.container-sec {
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .img-fit{
     height: 250px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .fondoHowarts{
@@ -63,3 +72,131 @@ header {
     }
 }
 
+/* ==========
+formulario
+========== */
+
+.container {
+width: 100px;
+height: 100vh;
+background-image: url(image/puerta.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+form {
+width: 420px;
+height: 400px;
+background: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px 0px;
+border-radius: 10px;
+border: 3px solid  rgba(255, 255, 255, .2);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+input {
+    width: 75px;
+    padding: 5px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+
+.user {
+    margin-bottom: 24px;
+}
+
+#check {
+    width: 15px;
+}
+
+.checking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 4px;
+    margin-right: 180px;
+    color: #fff;
+}
+
+.btn {
+    padding: 5px 150 px;
+    margin-top: 20px;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    background: #169dd3;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    z-index: 1;
+    transition: transfor 0.4s top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0px;
+    background: #169dd3;
+    color: #fff;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
