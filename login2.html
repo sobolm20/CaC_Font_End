@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login_content">
+            <img src="image/puerta.jpg" alt="login_image" class="login_img">
+            <form action="" class="login_form" id="formy">
+                <div>
+                    <h1 class="login_title"><span>Hogwarts</span>Back</h1>
+                    <p class="login_description">Bienvenidos, Por favor inicie secion para continuar</p>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <label for="input-email" class="login_label">Email</label>
+                            <input type="email" placeholder="Ingrese su correo electronico" required class="login_input" id="input-email">
+                        </div>
+                        <div>
+                            <label for="input-user" class="login_label">Usuario</label>
+                            <input type="user" placeholder="Ingrese usuario" required class="login_user" id="input-user">
+                        </div>
+                        <div>
+                            <label for="input-pass" class="login_label">Password</label>
+                            <div class="login_box">
+                                <input type="password" placeholder="Ingrese clave" required class="login_pass" id="input-pass">
+                                <i class="ri-eye-off-line login-eye" id="input-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="login_check-input" id="input-check">
+                        <label for="input-check" login_check-label>Recordar</label>
+                    </div>
+                    <div class="login_buttons">
+                        <button class="login_button login_button-ghost" onclick="Register ()">Iniciar</button>
+                        <button class="login_button login_button-ghost" onclick="Register ()">Registrarse</button>
+                        
+                    </div>
+                    <button type="button" class="btn btn-outline-danger btn-lg">Olvido su clave?</button>
+                    <a class="btn btn-outline-dark" href="index.html" role="button">cerrar</a>
+                    <!-- <a href="#" class="login_forgot">Olvido su clave?</a> -->
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

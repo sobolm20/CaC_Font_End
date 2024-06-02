@@ -32,7 +32,7 @@ header {
 .container-sec {
     margin: 20px;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -109,7 +109,7 @@ h2 {
 }
 
 input {
-    width: 75px;
+    width: 150px;
     padding: 5px;
     height: 40px;
     border-radius: 20px;
@@ -199,4 +199,213 @@ input {
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========
+formulario2
+========== */
+
+.login_content,
+.login_form,
+.login_input {
+    display: grid;
+}
+.login_content {
+    position: relative;
+    height: 100vh;
+    align-items: center;
+}
+.login_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.login_form {
+    position: relative;
+    background: transparent;
+    border: 2px solid hsla(244, 16%, 92%, 0.75);
+    margin-inline: 1.5rem;
+    row-gap: 1.25rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+}
+.login_title {
+    color: hsl(244, 12%, 12%);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.login_title span {
+    color: hsl(244, 75%, 57%)
+}
+.login_description {
+    font-size: 0.810rem;
+}
+.login_input {
+    row-gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.login_label {
+    display: block;
+    color:hsl(244, 12%, 12%);
+    font-size: 0.810rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.login_input {
+    width: 100%;
+    padding: 14px 12px;
+    border-radius: 6px;
+    border: 2px solid hsl(244, 4%, 36%);
+    background-color: hsla(244, 16%, 92%, 0.6);
+    color:  hsl(244, 12%, 12%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: border 0.4s;
+}
+.login_input::placeholder {
+    color: hsl(244, 4%, 36%);
+}
+.login_input:focus,
+.login_input:valid {
+    border: 2px solid hsl(244, 75%, 57%)
+}
+.login_box{
+    position: relative;
+}
+.login_box .login_input {
+    padding-right: 36px;
+}
+.login_eye {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    right: 0.75rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.login_check {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+.login_check-input {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border:2px solid hsl(244, 75%, 57%);
+    background-color: hsla(244, 16%, 92%, 0.6);
+    border-radius: 0.25rem;
+}
+.login_check-input:checked {
+    background-color: hsl(244, 75%, 57%);
+}
+.login_check-input:checked::before {
+    content: "";
+    display: block;
+    color: #fff;
+    font-size: 0.75rem;
+    transform: translate(1.5px, -2.5px);
+}
+.login_check-label {
+    font-size: .810rem;
+}
+.login_buttons {
+    display: flex;
+    column-gap: 0.75;
+}
+.login_button {
+    width: 100%;
+    padding: 14px 2rem;
+    border-radius: 6px;
+    background: linear-gradient(180deg(hsl(244, 75%, 57%), hsl(249, 64%, 47%)));
+    color: #fff;
+    font-size: 0.810rem;
+    font-weight: 600;
+    box-shadow: 0 6px 24px hsl(244, 75%, 48%, 0.5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.login_button-ghost {
+    background: hsl(244, 16%, 92%, 0.6);
+    border: 2px solid hsl(244, 75%, 57%);
+    color: hsl(244, 75%, 57%);
+    box-shadow: none;
+}
+.login_forgot {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color:  hsl(244, 12%, 12%);
+    text-decoration: none;
+}
+@media screen and (max-width: 360px) {
+    .login_buttons{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 576px) {
+    .login_form {
+        width: 450px;
+        justify-self: center;
+    }
+}
+@media screen and (max-width: 1064px) {
+    .container {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .login_content {
+        width: 1024px;
+        height: 600px;
+    } 
+    .login_img {
+        border-radius: 3.5rem;
+        box-shadow: 0 24px 48px hsla(244, 75%, 36%, 0.45);
+    }
+    .login_form {
+        justify-self: flex-end;
+        margin-right: 4.5rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .login_content {
+        height: 700px;
+    }
+    .login_form {
+        row-gap: 2rem;
+        padding: 3rem;
+        border-radius: 1.25rem;
+        border: 2.5px solid hsla(244, 16%, 92%, 0.75);
+    }
+    .login_description,
+    .login_label,
+    .login_button {
+        font-size: 1rem;
+    }
+    .login_inputs {
+        row-gap: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    .login_input {
+        border: 2.5px solid hsl(244, 4%, 36%);
+        padding: 1rem;
+        font-size: 0.810rem;
+    }
+    .login_input:focus,
+    .login_input:valid {
+        border: 2.5px solid hsl(244, 75%, 57%);
+    }
+    .login_button {
+        padding-block: 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .login_button-ghost {
+        border: 2.5px solid hsl(244, 75%, 57%);
+    }
 }
