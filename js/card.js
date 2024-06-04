@@ -8,7 +8,6 @@ async function fetchApi() {
         let urlApi = 'https://hp-api.onrender.com/api/characters'
         let fetchResponse = await fetch(urlApi)
         let response = await fetchResponse.json()
-        console.log(response)
         personajes = [...response]
         console.log(personajes);
         printCards('perscomp',response)
